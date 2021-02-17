@@ -1,34 +1,46 @@
-Restaurant.create!(
-  name: "Chinese",
-  address: "Brussel",
-  phone_number: "+123 123 123",
-  category: "belgian"
-)
+Restaurant.destroy_all
 
-Restaurant.create!(
-  name: "McDonalds",
-  address: "France",
-  phone_number: "+123 456 789",
-  category: "french"
-)
+2.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number,
+    category: 'japanese'
+  )
+end
 
-Restaurant.create!(
-  name: "Pizza express",
-  address: "Italy",
-  phone_number: "+987 654 321",
-  category: "italian"
-)
+2.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number,
+    category: 'french'
+  )
+end
 
-Restaurant.create!(
-  name: "KFC",
-  address: "Japan",
-  phone_number: "+987 987 987",
-  category: "japanese"
-)
+2.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number,
+    category: 'chinese'
+  )
+end
 
-Restaurant.create!(
-  name: "Wagamama",
-  address: "London",
-  phone_number: "+000 000 000",
-  category: "chinese"
-)
+2.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number,
+    category: 'italian'
+  )
+end
+
+2.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.city,
+    phone_number: Faker::PhoneNumber.phone_number,
+    category: 'belgian'
+  )
+end
