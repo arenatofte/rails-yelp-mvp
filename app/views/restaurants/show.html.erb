@@ -38,7 +38,7 @@
         <% end %>
       </div>
 
-      <%= form_with @restaurant do |f| %>
+      <%= simple_form_for [ @restaurant, @review] do |f| %>
         <%= f.input :rating, collection: 0..5 %>
         <%= f.input :content%>
         <%= f.submit class: 'btn btn-primary' %>
