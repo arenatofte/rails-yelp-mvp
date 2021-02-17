@@ -1,5 +1,3 @@
-Restaurant.destroy_all if Rails.env.development?
-
 Restaurant.create!(
   name: "Chinese",
   address: "Brussel",
