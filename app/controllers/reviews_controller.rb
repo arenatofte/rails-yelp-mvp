@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+  def new
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = Review.new
+  end
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
@@ -9,11 +13,6 @@ class ReviewsController < ApplicationController
     else
       render 'restaurants/show'
     end
-  end
-
-  def new
-    @review = Review.new
-    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   private
